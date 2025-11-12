@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto1.flowgorithm"/>
+        <attribute name="authors" value="Vladimir Bastidas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-12 04:56:03 p.&#8239;m."/>
+        <attribute name="created" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTI7MDM6MDM6NDUgcC7igK9tLjsxMjM3Mw=="/>
+        <attribute name="edited" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTI7MDQ6NTY6MDMgcC7igK9tLjsxOzEyNDg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="restante" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="random(6)+1"/>
+            <call expression="tirardado(dado1)"/>
+            <assign variable="restante" expression="tirardado(dado1)"/>
+            <output expression="&quot;N&#250;mero del dado: &quot; &amp; dado1" newline="True"/>
+            <output expression="&quot;restante e la divicion: &quot; &amp; restante" newline="True"/>
+            <if expression="restante == 0">
+                <then>
+                    <output expression="&quot;__--El n&#250;mero es PAR--__&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;__--El n&#250;mero es IMPAR--__&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="tirardado" type="Integer" variable="restante">
+        <parameters>
+            <parameter name="dado1" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="restante" type="Integer" array="False" size=""/>
+            <assign variable="restante" expression="dado1 % 2"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+Proceso Lanzamiento_De_Dado
+	//Definiciones
+    Definir tirar Como Caracter;
+    Definir dado Como Entero;
+	//input
+    Escribir "¿Te gustaría tirar el dado? (s/n): ";
+    Leer tirar;
+	//condiciones
+    Mientras tirar = "s" Hacer
+        Escribir "Presiona cualquier tecla para lanzar";
+        Esperar Tecla;
+        Escribir "¡Lanzando el dado!";
+		
+        dado <- Aleatorio(1,6);//genera un  numero aleatorio ente 1 y 6
+        Escribir "Número del dado: ", dado;
+		
+        LanzarDado(dado);  // Se pasa el número como argumento
+		//revisa si quieres volver a tirar
+        Escribir "¿Quieres tirar otra vez? (s/n): ";
+        Leer tirar;
+    FinMientras
+	
+    Escribir "Juego terminado. ¡Gracias por jugar!";
+FinProceso
+
+//fincion  utiliza el numero crado aleatoriamente 
+Funcion LanzarDado(numero)
+    Definir resto Como Entero;
+	//genera el resto y compruba si es 0 o 1 
+	resto <- numero MOD 2;
+	//condicion si es 0 es diferente a 0 es inpar 
+    Si resto = 0 Entonces
+        Escribir "_-El número del dado es par-_";
+    SiNo
+        Escribir "_-El número del dado es impar-_";
+    FinSi
+FinFuncion
