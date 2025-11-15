@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="par_o_impar_reto2_flowgorithm"/>
+        <attribute name="authors" value="Vladimir Bastidas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 04:41:13 p.&#8239;m."/>
+        <attribute name="created" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTU7MDQ6MzA6NDAgcC7igK9tLjsxMjM3Mg=="/>
+        <attribute name="edited" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTU7MDQ6NDE6MTMgcC7igK9tLjsxOzEyNDgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, resto" type="Integer" array="False" size=""/>
+            <output expression="&quot;__--Welcome, please enter a number (positive or negative)--__&quot;" newline="True"/>
+            <input variable="num1"/>
+            <assign variable="resto" expression="num1 mod 2"/>
+            <if expression="resto = 0">
+                <then>
+                    <output expression="&quot;the number entered -&quot; &amp; num1 &amp; &quot;-: is even&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;the number entered -&quot; &amp; num1&amp; &quot;-: is odd&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
