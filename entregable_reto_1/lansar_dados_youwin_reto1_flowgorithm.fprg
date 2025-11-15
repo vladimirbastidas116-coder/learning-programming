@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lansar_dados_youwin_reto1_flowgorithm"/>
+        <attribute name="authors" value="Vladimir Bastidas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 04:29:47 p.&#8239;m."/>
+        <attribute name="created" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTU7MDM6NTg6MzUgcC7igK9tLjsxMjM4NQ=="/>
+        <attribute name="edited" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTU7MDQ6Mjk6NDcgcC7igK9tLjsyOzEyNDk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1, dado2, res1, res2" type="Integer" array="False" size=""/>
+            <declare name="tecla" type="String" array="False" size=""/>
+            <output expression="&quot;Welcome, would you like to roll the dice?&quot;" newline="True"/>
+            <output expression="&quot;Press any key and then Enter to continue...&quot;" newline="True"/>
+            <input variable="tecla"/>
+            <assign variable="dado1" expression="random(6)+1"/>
+            <assign variable="dado2" expression="random(6)+1"/>
+            <assign variable="res1" expression="dado1 mod 2"/>
+            <assign variable="res2" expression="dado2 mod 2"/>
+            <output expression="&quot;__--dado 1: &quot; &amp; dado1 &amp; &quot;--__&quot;" newline="True"/>
+            <output expression="&quot;__--dado 2: &quot; &amp; dado2 &amp; &quot;--__&quot;" newline="True"/>
+            <if expression="dado1 = 0">
+                <then>
+                    <output expression="&quot;the number is even: &quot; &amp; res1" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is odd: &quot; &amp; res1" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado2 = 0">
+                <then>
+                    <output expression="&quot;the number is even: &quot; &amp; res1" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is odd: &quot; &amp; res1" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado1 = dado2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
