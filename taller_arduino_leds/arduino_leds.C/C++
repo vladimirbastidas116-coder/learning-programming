@@ -1,0 +1,98 @@
+const int BATHROOM_LIGHT = 11;
+const int BEDROOM_LIGHT = 12;
+const int KITCHEN_LIGHT = 13;
+
+void menu() {
+  Serial.println("============== MENU ==============");
+  Serial.println("[1] Turn ON bathroom light");
+  Serial.println("[2] Turn OFF bathroom light");
+  Serial.println("[3] Turn ON bedroom light");
+  Serial.println("[4] Turn OFF bedroom light");
+  Serial.println("[5] Turn ON kitchen light");
+  Serial.println("[6] Turn OFF kitchen light");
+  Serial.println("[7] Turn ON all lights");
+  Serial.println("[8] Turn OFF all lights");
+  Serial.println("[9] Blinking lights");
+  Serial.println("Enter option:");
+}
+
+void setup() {
+  pinMode(BATHROOM_LIGHT, OUTPUT);
+  pinMode(BEDROOM_LIGHT, OUTPUT);
+  pinMode(KITCHEN_LIGHT, OUTPUT);
+  Serial.begin(9600);
+  delay(1000);
+}
+
+void loop() {
+  menu();
+
+  while (Serial.available() == 0) {
+  }
+
+  char opt = Serial.read();
+  Serial.print("You selected: ");
+  Serial.println(opt);
+
+  switch (opt) {
+    case '1':
+      digitalWrite(BATHROOM_LIGHT, HIGH);
+      Serial.println("Bathroom light ON");
+      break;
+    case '2':
+      digitalWrite(BATHROOM_LIGHT, LOW);
+      Serial.println("Bathroom light OFF");
+      break;
+    case '3':
+      digitalWrite(BEDROOM_LIGHT, HIGH);
+      Serial.println("Bedroom light ON");
+      break;
+    case '4':
+      digitalWrite(BEDROOM_LIGHT, LOW);
+      Serial.println("Bedroom light OFF");
+      break;
+    case '5':
+      digitalWrite(KITCHEN_LIGHT, HIGH);
+      Serial.println("Kitchen light ON");
+      break;
+    case '6':
+      digitalWrite(KITCHEN_LIGHT, LOW);
+      Serial.println("Kitchen light OFF");
+      break;
+    case '7':
+      digitalWrite(BATHROOM_LIGHT, HIGH);
+      digitalWrite(BEDROOM_LIGHT, HIGH);
+      digitalWrite(KITCHEN_LIGHT, HIGH);
+      Serial.println("All lights ON");
+      break;
+    case '8':
+      digitalWrite(BATHROOM_LIGHT, LOW);
+      digitalWrite(BEDROOM_LIGHT, LOW);
+      digitalWrite(KITCHEN_LIGHT, LOW);
+      Serial.println("All lights OFF");
+      break;
+    case '9':
+      Serial.println("Blinking...");
+      while (true) {
+        if (Serial.available() > 0) {
+          opt = Serial.read();
+          break;
+        }
+        digitalWrite(BATHROOM_LIGHT, HIGH);
+        digitalWrite(BEDROOM_LIGHT, HIGH);
+        digitalWrite(KITCHEN_LIGHT, HIGH);
+        delay(300);
+        digitalWrite(BATHROOM_LIGHT, LOW);
+        digitalWrite(BEDROOM_LIGHT, LOW);
+        digitalWrite(KITCHEN_LIGHT, LOW);
+        delay(300);
+      }
+      break;
+    default:
+      Serial.println("Invalid option");
+      break;
+  }
+
+  Serial.println();
+  delay(300);
+}
