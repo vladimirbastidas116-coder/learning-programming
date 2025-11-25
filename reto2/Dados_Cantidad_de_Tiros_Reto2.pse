@@ -1,0 +1,32 @@
+Funcion add <- suma_de_tiros(dado1, add)
+	// Esta función recibe el valor del dado (dado1)
+	// y la suma acumulada anterior (add)
+	// Devuelve la nueva suma total
+	add <- dado1 + add;
+FinFuncion
+
+Proceso Dados_Cantidad_de_Tiros_Reto2
+	// Declaración de variables
+	Definir dado1, numtiros, add, num_repeti, cont_tiros Como Entero;
+	// Mensaje de bienvenida
+	Escribir "Hola, ¿cuántas veces te gustaría tirar los dados?";
+	Leer numtiros;
+	Escribir "Presiona cualquier tecla para lanzar...";
+	Esperar Tecla;
+	// Inicialización de variables
+	add <- 0;
+	cont_tiros <- 0;
+	// Ciclo para lanzar el dado las veces indicadas
+	Para num_repeti <- 1 Hasta numtiros Con Paso 1 Hacer
+		// Generar valor aleatorio del dado
+		dado1 <- Aleatorio(1,6);
+		// Contador de tiros
+		cont_tiros <- cont_tiros + 1;
+		// Mostrar resultado del tiro actual
+		Escribir "Tiro ", cont_tiros, ": ", dado1;
+		// Llamada a la función
+		add <- suma_de_tiros(dado1, add);
+	FinPara
+	// Mostrar la suma total al final
+	Escribir "La suma de todos los lanzamientos es: ", add;
+FinProceso

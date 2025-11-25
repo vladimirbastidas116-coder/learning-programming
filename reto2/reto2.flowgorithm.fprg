@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto2.flowgorithm"/>
+        <attribute name="authors" value="Vladimir Bastidas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 08:18:30 a.&#8239;m."/>
+        <attribute name="created" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTI7MTA6NTI6MjQgcC7igK9tLjsxMjM3Mg=="/>
+        <attribute name="edited" value="VmxhZGltaXIgQmFzdGlkYXM7TEFQVE9QLUlERkxQMjg4OzIwMjUtMTEtMTU7MDg6MTg6MzAgYS7igK9tLjszOzEyNDc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="add, whil, dado1, acumulado, contador, numtiros" type="Integer" array="False" size=""/>
+            <assign variable="acumulado" expression="0"/>
+            <assign variable="whil" expression="0"/>
+            <assign variable="contador" expression="1"/>
+            <assign variable="add" expression="0"/>
+            <output expression="&quot;Hola, &#191;cu&#225;ntas veces te gustar&#237;a tirar los dados?&quot;" newline="True"/>
+            <input variable="numtiros"/>
+            <for variable="whil" start="contador" end="numtiros" direction="inc" step="1">
+                <assign variable="dado1" expression="random(6)+1"/>
+                <output expression="&quot;Tiro &quot; &amp; contador &amp; &quot; valor: &quot; &amp; dado1" newline="True"/>
+                <assign variable="contador" expression="contador + 1"/>
+                <assign variable="add" expression="acumulado(dado1, add)"/>
+            </for>
+            <output expression="&quot;La suma de todos los lanzamientos es: &quot; &amp;  add" newline="True"/>
+        </body>
+    </function>
+    <function name="acumulado" type="Integer" variable="resultado">
+        <parameters>
+            <parameter name="dado" type="Integer" array="False"/>
+            <parameter name="suma" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resultado" type="Integer" array="False" size=""/>
+            <assign variable="resultado" expression="dado + suma"/>
+        </body>
+    </function>
+    <function name="sumtiros" type="Integer" variable="acumulado ">
+        <parameters>
+            <parameter name="dado" type="Integer" array="False"/>
+            <parameter name="suma" type="Integer" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+</flowgorithm>
