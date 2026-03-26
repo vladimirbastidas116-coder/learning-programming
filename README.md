@@ -1,23 +1,23 @@
-# Ì≥ö Learning Programming
+# Ì≤ª Learning Programming Portfolio
 
-## Ì≥Ç Estructura Profesional
+Repositorio organizado de aprendizaje en programaci√≥n.
 
-### Ì∫Ä Projects
-Proyectos completos
+## Ì∫Ä Projects
+Proyectos completos aplicados a problemas reales.
 
-### Ì∑† Exercises
-Pr√°ctica b√°sica por lenguaje
+## ÌøÜ Challenges
+Retos de l√≥gica y algoritmia.
 
-### ÌøÜ Challenges
-Retos de programaci√≥n (algoritmia, l√≥gica)
+## Ì≥¶ Deliverables
+Trabajos acad√©micos y entregas formales.
 
-### Ì≥¶ Deliverables
-Trabajos formales / entregas acad√©micas
-
-### Ì≥Ñ Docs
-Apuntes y documentaci√≥n
+## Ì∑† Exercises
+Pr√°cticas b√°sicas por lenguaje.
 
 ## Ìª†Ô∏è Tecnolog√≠as
 - Java
 - Python
 - PSeInt
+
+## ÌæØ Objetivo
+Construir habilidades s√≥lidas para desarrollo profesional.
