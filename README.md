@@ -1,35 +1,28 @@
-# Ì∫Ä Software Engineering Portfolio
+# Ì≥ö Learning Programming
 
-¬°Hola! Ì±ã Soy un apasionado de la ingenier√≠a de software en constante evoluci√≥n. Este repositorio es mi laboratorio personal donde documento mi aprendizaje, resuelvo desaf√≠os de l√≥gica y construyo las bases de mi carrera t√©cnica.
+Repositorio personal de aprendizaje en programaci√≥n.
 
-## Ì≥ö √Åreas de Enfoque Actual
-Me dedico a fortalecer los pilares fundamentales del desarrollo de software:
-* **L√≥gica de Programaci√≥n:** Resoluci√≥n de problemas complejos y dise√±o de algoritmos eficientes.
-* **Desarrollo con Java & Python:** Implementaci√≥n de estructuras de control, funciones y l√≥gica de negocio.
-* **Matem√°ticas Aplicadas:** Implementaci√≥n programada de conceptos algebraicos y resoluci√≥n de polinomios.
-* **Control de Versiones:** Gesti√≥n de proyectos mediante Git y flujo de trabajo en GitHub.
+## Ì≥Ç Estructura
 
-## Ì≥Ç Estructura del Proyecto
-* `java/` ‚Üí Algoritmos, l√≥gica de programaci√≥n y ejercicios pr√°cticos de sintaxis.
-* `python/` ‚Üí Scripts de automatizaci√≥n y experimentaci√≥n con el lenguaje.
-* `pseint/` ‚Üí Prototipado de l√≥gica y pensamiento algor√≠tmico.
-* `docs/` ‚Üí Documentaci√≥n t√©cnica, notas de estudio y recursos de ingenier√≠a.
+### Ì∫Ä Projects
+Proyectos m√°s completos y aplicados
+- Java App
+- Python Automation
+- Algorithms
 
-## Ìª†Ô∏è Herramientas y Tecnolog√≠as
-* **Lenguajes:** Java, Python.
-* **Entornos:** VS Code, IntelliJ IDEA.
-* **Sistemas:** Linux / Windows Terminal.
+### Ì∑† Exercises
+Pr√°cticas y ejercicios por lenguaje
+- Java
+- Python
+- PSeInt
 
-## ÌæØ Roadmap de Aprendizaje
-- [ ] Profundizar en Programaci√≥n Orientada a Objetos (POO).
-- [ ] Iniciaci√≥n en Gesti√≥n de Bases de Datos Relacionales (SQL).
-- [ ] Exploraci√≥n de Estructuras de Datos y Complejidad Algor√≠tmica.
+### Ì≥Ñ Docs
+Apuntes, notas y documentaci√≥n
 
----
+## Ìª†Ô∏è Tecnolog√≠as
+- Java
+- Python
+- PSeInt
 
-cat << 'EOF' > .gitignore
-*.class
-*.log
-__pycache__/
-*.exe
-.DS_Store
+## ÌæØ Objetivo
+Mejorar habilidades de programaci√≥n y construir proyectos reales.
